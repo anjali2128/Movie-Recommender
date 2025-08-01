@@ -1,17 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Movie Recommender</title>
+    <meta charset="UTF-8">
+    <title>🎬 Movie Explorer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-
 </head>
 <body>
-    <h2>🎬 Movie Recommender System</h2>
-    <form action="/recommend" method="post">
-        <label>Enter a movie name:</label><br>
-        <input type="text" name="movie" required><br><br>
-        <input type="submit" value="Get Recommendations">
+    <h2>🎬 Movie Explorer</h2>
+    <form action="/filter" method="post">
+        <label><strong>Filter Type:</strong></label>
+        <select name="filter" id="filterSelect" onchange="toggleGenreInput()">
+            <option value="genre">By Genre</option>
+            <option value="latest">Latest Movies</option>
+            <option value="top">Top Rated / Most Popular</option>
+        </select>
+
+        <div id="genreInput">
+            <label>🎭 Genre:</label>
+            <select name="genre">
+                <option value="">-- Choose Genre --</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="animation">Animation</option>
+                <option value="comedy">Comedy</option>
+                <option value="crime">Crime</option>
+                <option value="drama">Drama</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="science fiction">Science Fiction</option>
+                <option value="thriller">Thriller</option>
+                <option value="war">War</option>
+            </select>
+        </div>
+
+        <input type="submit" value="🎬 Find Movies">
     </form>
+
+    <script>
+        function toggleGenreInput() {
+            const filter = document.getElementById("filterSelect").value;
+            const genreInput = document.getElementById("genreInput");
+
+            if (filter === "genre") {
+                genreInput.style.display = "block";
+            } else {
+                genreInput.style.display = "none";
+            }
+        }
+
+        // Hide genre input by default if not "genre"
+        window.onload = toggleGenreInput;
+    </script>
 </body>
 </html>

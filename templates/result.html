@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Recommendations</title>
+    <meta charset="UTF-8">
+    <title>🎬 Your Movie Recommendations</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 <body>
-    <h2>💡 Recommended Movies for: {{ movie }}</h2>
+    <h2>🔮 Top Recommendations for: <span style="color:#00ffa3;">{{ movie }}</span></h2>
+
     {% if recommendations %}
         <ul>
             {% for rec in recommendations %}
-                <li>{{ rec }}</li>
+                <li>
+                    <strong>🎥 {{ rec }}</strong>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>❌ Movie not found in the database.</p>
+        <p style="color: #ff6b6b; font-size: 1.2rem; margin-top: 30px;">
+            ❌ Sorry, "<strong>{{ movie }}</strong>" is not in our database.<br>
+            Try a different one!
+        </p>
     {% endif %}
-    <a href="/">Back</a>
+
+    <a href="/">🔁 Back to Home</a>
 </body>
 </html>
