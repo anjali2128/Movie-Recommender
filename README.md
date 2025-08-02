@@ -2,7 +2,6 @@
 
 A personalized movie recommendation web app built using Python, Flask, and Natural Language Processing. Suggests similar movies based on the input title using content-based filtering and cosine similarity.
 
-![screenshot](https://user-images.githubusercontent.com/anjali2128/movie-app-demo.png) <!-- Replace this with an actual screenshot if available -->
 
 ---
 
@@ -34,3 +33,29 @@ TMDB 5000 Movies Dataset
 
 ## 📁 Project Structure
 
+movie/
+├── static/ # CSS, JS, assets
+├── templates/ # HTML templates (home, result)
+├── tmdb_5000_movies.csv # Movie data
+├── movie_recommender.py # Flask application
+├── recommendation.py # ML logic for similarity
+└── README.md 
+---
+
+## 💻 How to Run Locally
+
+### 🔧 Step-by-Step
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/anjali2128/movie.git
+cd movie
+```
+---
+##📈 Future Enhancements
+
+🔗 Integrate TMDB API to fetch real posters, ratings, trailers
+👥 Add collaborative filtering (user-based)
+🌍 Deploy using Render, Railway, or Heroku
+🪄 Add search suggestions/autocomplete
