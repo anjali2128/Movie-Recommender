@@ -53,6 +53,15 @@ movie/
 git clone https://github.com/anjali2128/movie.git
 cd movie
 ```
+2. Install dependencies:
+ ```bash
+   pip install -r requirements.txt
+```
+   
+3. Run the app:
+   ```bash
+   python movie_recommender.py
+
 ---
 📈 Future Enhancements
 
