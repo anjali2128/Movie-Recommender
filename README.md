@@ -34,12 +34,13 @@ TMDB 5000 Movies Dataset
 ## 📁 Project Structure
 
 movie/
-├── static/ # CSS, JS, assets
-├── templates/ # HTML templates (home, result)
-├── tmdb_5000_movies.csv # Movie data
-├── movie_recommender.py # Flask application
-├── recommendation.py # ML logic for similarity
-└── README.md 
+├── static/                 # CSS, JS, Images
+├── templates/              # HTML templates (home, result)
+├── tmdb_5000_movies.csv    # Movie data
+├── movie_recommender.py    # Flask application
+├── recommendation.py       # ML logic for similarity
+└── README.md
+
 ---
 
 ## 💻 How to Run Locally
@@ -53,7 +54,7 @@ git clone https://github.com/anjali2128/movie.git
 cd movie
 ```
 ---
-##📈 Future Enhancements
+📈 Future Enhancements
 
 🔗 Integrate TMDB API to fetch real posters, ratings, trailers
 👥 Add collaborative filtering (user-based)
